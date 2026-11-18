@@ -199,6 +199,7 @@
     }
     .contact .sep { display: none; }
     .print-only { display: none !important; }
+    .print-inline { display: none; }
     .contact li { overflow-wrap: anywhere; max-width: 100%; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -512,6 +513,31 @@
       .chips li { display: inline; padding: 0; border: 0; background: none; color: #111; font-size: 10.5pt; }
       .chips .sep { display: inline; }
       #conferences .t-item p { font-style: italic; }
+
+      /* ---- Compact one-page layout (fits both A4 and Short/Letter) ---- */
+      @page { size: auto; margin: 0.35in 0.42in; }
+      html, body { font-size: 9.3pt; line-height: 1.13; }
+      .card .chips { padding: 0 !important; margin: 0 !important; }
+      .t-item p:has(+ ul), .t-item p + ul { display: inline !important; margin: 0 !important; padding: 0 !important; }
+      .t-item p + ul .award { display: inline !important; margin: 0 !important; }
+      .t-item p + ul .award::before { content: " | "; display: inline !important; position: static; background: none; transform: none; width: auto; height: auto; }
+      .print-inline { display: inline !important; font-weight: normal; }
+      .screen-only { display: none !important; }
+      header.hero h1 { font-size: 16pt; }
+      .headline { font-size: 10pt; margin: 1px 0 2px !important; }
+      .contact { font-size: 9.5pt; }
+      .photo-wrap { width: 0.85in; height: 0.85in; }
+      h2 { font-size: 10pt; margin: 4px 0 2px; padding-bottom: 1px; border-bottom-width: 1.2px; }
+      .card, .t-item.card { margin: 0 0 4px; }
+      .t-item { margin-bottom: 3px; }
+      .summary-card p, .card h3, .featured h3, .date, .sub, .card li, .card .award,
+      .skill-group h3, .chips li { font-size: 9.3pt; }
+      .contact { font-size: 9.3pt; }
+      .card, .t-item.card { margin: 0 0 2px; }
+      .card ul { margin: 1px 0 0; padding-left: 15px; }
+      .card li { margin: 0; }
+      .card .award { margin: 0 0 0 15px; }
+      .skill-group { margin: 0 0 1px; }
     }
   </style>
 </head>
@@ -713,18 +739,18 @@
 
         <div class="t-item card reveal from-left">
           <div class="entry-head">
-            <h3>Graceville Elementary School</h3>
+            <h3>Graceville Elementary School<span class="print-inline"> – Primary Education</span></h3>
             <span class="date">2014 – 2017</span>
           </div>
-          <p>Primary Education</p>
+          <p class="screen-only">Primary Education</p>
         </div>
 
         <div class="t-item card reveal from-left">
           <div class="entry-head">
-            <h3>San Vicente Elementary School</h3>
+            <h3>San Vicente Elementary School<span class="print-inline"> – Primary Education</span></h3>
             <span class="date">2011 – 2014</span>
           </div>
-          <p>Primary Education</p>
+          <p class="screen-only">Primary Education</p>
         </div>
 
       </div>
@@ -735,10 +761,10 @@
       <div class="timeline">
         <div class="t-item card reveal from-left">
           <div class="entry-head">
-            <h3>IRCITE 2026</h3>
+            <h3>IRCITE 2026<span class="print-inline"> – Participant</span></h3>
             <span class="date">2026</span>
           </div>
-          <p>Participant</p>
+          <p class="screen-only">Participant</p>
         </div>
       </div>
     </section>
