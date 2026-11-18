@@ -515,25 +515,26 @@
       #conferences .t-item p { font-style: italic; }
 
       /* ---- Compact one-page layout (fits both A4 and Short/Letter) ---- */
-      @page { size: auto; margin: 0.35in 0.42in; }
-      html, body { font-size: 9.3pt; line-height: 1.13; }
+      @page { size: auto; margin: 0.4in 0.5in; }
+      html, body { font-size: 9.8pt; line-height: 1.18; }
+      .print-hide { display: none !important; }
       .card .chips { padding: 0 !important; margin: 0 !important; }
       .t-item p:has(+ ul), .t-item p + ul { display: inline !important; margin: 0 !important; padding: 0 !important; }
       .t-item p + ul .award { display: inline !important; margin: 0 !important; }
       .t-item p + ul .award::before { content: " | "; display: inline !important; position: static; background: none; transform: none; width: auto; height: auto; }
       .print-inline { display: inline !important; font-weight: normal; }
       .screen-only { display: none !important; }
-      header.hero h1 { font-size: 16pt; }
-      .headline { font-size: 10pt; margin: 1px 0 2px !important; }
+      header.hero h1 { font-size: 17pt; }
+      .headline { font-size: 10.5pt; margin: 2px 0 3px !important; }
       .contact { font-size: 9.5pt; }
-      .photo-wrap { width: 0.85in; height: 0.85in; }
-      h2 { font-size: 10pt; margin: 4px 0 2px; padding-bottom: 1px; border-bottom-width: 1.2px; }
+      .photo-wrap { width: 1in; height: 1in; }
+      h2 { font-size: 10.5pt; margin: 6px 0 3px; padding-bottom: 1px; border-bottom-width: 1.2px; }
       .card, .t-item.card { margin: 0 0 4px; }
       .t-item { margin-bottom: 3px; }
       .summary-card p, .card h3, .featured h3, .date, .sub, .card li, .card .award,
-      .skill-group h3, .chips li { font-size: 9.3pt; }
-      .contact { font-size: 9.3pt; }
-      .card, .t-item.card { margin: 0 0 2px; }
+      .skill-group h3, .chips li { font-size: 9.8pt; }
+      .contact { font-size: 9.8pt; }
+      .card, .t-item.card { margin: 0 0 4px; }
       .card ul { margin: 1px 0 0; padding-left: 15px; }
       .card li { margin: 0; }
       .card .award { margin: 0 0 0 15px; }
@@ -647,10 +648,10 @@
           </div>
           <p class="sub">Capstone Project | Full Stack Developer</p>
           <ul>
-            <li>Developed a web-based aquarium visualization and recommendation system that helps aquarium hobbyists plan and manage suitable aquarium environments.</li>
+            <li class="print-hide">Developed a web-based aquarium visualization and recommendation system that helps aquarium hobbyists plan and manage suitable aquarium environments.</li>
             <li>Built interactive 3D aquarium visualization alongside fish compatibility assessment and recommendation features in a single platform.</li>
             <li>Implemented rule-based evaluation of aquarium water quality, with supporting functions for monitoring water parameters.</li>
-            <li>Developed modules for managing aquarium projects, accessing aquascape templates and aquarium resources, and providing maintenance guidance.</li>
+            <li class="print-hide">Developed modules for managing aquarium projects, accessing aquascape templates and aquarium resources, and providing maintenance guidance.</li>
           </ul>
           <div class="tags" aria-hidden="true"><span class="tag">Web App</span><span class="tag">3D Visualization</span><span class="tag">Rule-Based System</span><span class="tag">Capstone</span></div>
         </article>
@@ -667,8 +668,8 @@
           <ul>
             <li>Developed an automated clinic management platform that digitizes patient registration, health records, billing, and inventory management.</li>
             <li>Integrated QR code technology for fast and secure access to patient data.</li>
-            <li>Implemented analytics-based monitoring and data-driven reports to help healthcare providers track performance and make informed decisions.</li>
-            <li>Reduced manual work and record errors by automating clinical record processing.</li>
+            <li class="print-hide">Implemented analytics-based monitoring and data-driven reports to help healthcare providers track performance and make informed decisions.</li>
+            <li class="print-hide">Reduced manual work and record errors by automating clinical record processing.</li>
           </ul>
           <div class="tags" aria-hidden="true"><span class="tag">Healthcare</span><span class="tag">QR Code</span><span class="tag">Analytics</span></div>
         </article>
@@ -684,8 +685,8 @@
           <p class="sub">Academic Project | Full Stack Developer</p>
           <ul>
             <li>Developed a registration system that streamlines player registration, team formation, and player statistics management for local basketball tournaments and leagues.</li>
-            <li>Replaced manual record-keeping to prevent disorganized records and duplicate player entries.</li>
-            <li>Enabled generation of team lineups and player performance reports.</li>
+            <li class="print-hide">Replaced manual record-keeping to prevent disorganized records and duplicate player entries.</li>
+            <li class="print-hide">Enabled generation of team lineups and player performance reports.</li>
             <li>Designed the system to run offline, allowing barangays, schools, and sports organizations to digitize operations without internet connectivity.</li>
           </ul>
           <div class="tags" aria-hidden="true"><span class="tag">Sports</span><span class="tag">Offline-First</span><span class="tag">Reports</span></div>
@@ -703,7 +704,7 @@
           <ul>
             <li>Developed a desktop point-of-sale system for a fast-food ordering setting.</li>
             <li>Implemented full order management (create, view, update, and delete orders) connected to a database.</li>
-            <li>Designed a simple, branded user interface for quick order handling.</li>
+            <li class="print-hide">Designed a simple, branded user interface for quick order handling.</li>
           </ul>
           <div class="tags" aria-hidden="true"><span class="tag">Desktop App</span><span class="tag">POS</span><span class="tag">CRUD</span></div>
         </article>
