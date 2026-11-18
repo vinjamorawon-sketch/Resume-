@@ -198,6 +198,7 @@
       border: 1px solid var(--card-border);
     }
     .contact .sep { display: none; }
+    .print-only { display: none !important; }
     .contact li { overflow-wrap: anywhere; max-width: 100%; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -477,8 +478,10 @@
       header.hero h1 .grad { background: none !important; color: #111 !important; -webkit-text-fill-color: #111; }
       .headline { margin: 2px 0 4px !important; font-size: 11pt; font-weight: bold; color: #333; }
       .contact { display: block; margin: 0; font-size: 10.5pt; color: #111; }
-      .contact li { display: inline; padding: 0; border: 0; background: none; }
+      .contact li { display: inline; padding: 0; border: 0; background: none; white-space: nowrap; }
       .contact .sep { display: inline; }
+      .contact li.print-only { display: inline !important; }
+      .contact .sep.print-only { display: inline !important; }
       .photo-wrap { width: 1.15in; height: 1.15in; margin: 0; }
       .photo-wrap::before, .photo-wrap::after { display: none; }
       .photo { border-radius: 0; border: 1px solid #ccc; }
@@ -558,7 +561,8 @@
             <li>09302533289<span class="sep"> | </span></li>
             <li><a href="mailto:jamorawonjalvinjay@gmail.com">jamorawonjalvinjay@gmail.com</a><span class="sep"> | </span></li>
             <li><a href="https://github.com/vinjamorawon-sketch" target="_blank" rel="noopener">GitHub Profile</a><span class="sep"> | </span></li>
-            <li><a href="https://www.linkedin.com/in/jamorawon-jalvin-jay-iii-b-undefined-b02a6b44a/" target="_blank" rel="noopener">LinkedIn Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/jamorawon-jalvin-jay-iii-b-undefined-b02a6b44a/" target="_blank" rel="noopener">LinkedIn Profile</a><span class="sep print-only"> | </span></li>
+            <li class="print-only"><a href="https://jalvinjay-jamorawon-resume.vercel.app">jalvinjay-jamorawon-resume.vercel.app</a></li>
           </ul>
           <div class="hero-actions anim no-print">
             <a class="btn primary" href="#projects">View Projects
